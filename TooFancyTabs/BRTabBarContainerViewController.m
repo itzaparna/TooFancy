@@ -8,6 +8,8 @@
 
 #import "BRTabBarContainerViewController.h"
 
+#import "BRWebViewController.h"
+
 @interface BRTabBarContainerViewController ()
 
 @property (nonatomic, retain) IBOutlet UITabBarController *tabBarController;
@@ -31,20 +33,14 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)stash {
-    UIToolbar *toolBar = [[UIToolbar alloc] initWithFrame:CGRectMake(0,
-                                                                     CGRectGetHeight(self.tabBarController.view.frame) - 40,
-                                                                     CGRectGetWidth(self.tabBarController.view.frame),
-                                                                     40)];
-    self.tabBarController.tabBar.hidden = YES;
-    [[[UIApplication sharedApplication] keyWindow] addSubview:toolBar];
-}
 
 
-- (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController
-{
-    if ([viewController class] == NSClassFromString(@"BRWebViewController")) {
-        [self stash];
+- (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController {
+    if ([viewController class] != NSClassFromString(@"BRTableViewController")) {
+        BRWebViewController *webViewController = [[BRWebViewController alloc] init];
+        [self.navigationController presentViewController:webViewController
+                                                animated:YES
+                                              completion:nil];
     }
 }
 
