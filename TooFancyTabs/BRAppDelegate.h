@@ -8,8 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+@class BRTabBarContainerViewController;
+
 @interface BRAppDelegate : UIResponder <UIApplicationDelegate>
 
-@property (strong, nonatomic) UIWindow *window;
+@property (nonatomic, retain) IBOutlet UIWindow *window;
+@property (nonatomic, retain) BRTabBarContainerViewController *tabBarController;
 
 @end

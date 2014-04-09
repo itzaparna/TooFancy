@@ -1,5 +1,5 @@
 //
-//  BRSecondViewController.h
+//  BRTabBarController.h
 //  TooFancyTabs
 //
 //  Created by Aparna Deshpande on 4/7/14.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BRSecondViewController : UIViewController
+@interface BRTabBarContainerViewController : UIViewController <UITabBarControllerDelegate>
 
 @end

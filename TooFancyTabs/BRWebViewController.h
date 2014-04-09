@@ -1,5 +1,5 @@
 //
-//  BRFirstViewController.h
+//  BRSecondViewController.h
 //  TooFancyTabs
 //
 //  Created by Aparna Deshpande on 4/7/14.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BRFirstViewController : UIViewController
+@interface BRWebViewController : UIViewController <UIWebViewDelegate>
 
 @end

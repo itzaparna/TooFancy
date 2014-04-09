@@ -1,0 +1,13 @@
+PODS:
+  - AFNetworking (0.10.1)
+  - JSONKit (1.5pre)
+
+DEPENDENCIES:
+  - AFNetworking (~> 0.10.1)
+  - JSONKit (~> 1.4)
+
+SPEC CHECKSUMS:
+  AFNetworking: 860f165f6dec289e482b76986ff1950e6214a210
+  JSONKit: b1f52f3f522b8602307769511d4fb47c6f856159
+
+COCOAPODS: 0.31.1
